@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -8,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 <AnchorPane prefHeight="446.0" prefWidth="545.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis.maven.controllers.RegisterCustomerController">
     <children>
         <TextField fx:id="name" layoutX="141.0" layoutY="142.0" mouseTransparent="true" prefHeight="26.0" prefWidth="251.0" />
@@ -30,18 +28,18 @@
         <TextField fx:id="eMail" layoutX="140.0" layoutY="194.0" prefHeight="26.0" prefWidth="182.0" />
         <TextField fx:id="phoneNumber" layoutX="141.0" layoutY="245.0" prefHeight="26.0" prefWidth="160.0" />
         <Button fx:id="saveButton" layoutX="164.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleRegisterClient" prefHeight="58.0" prefWidth="205.0" style="-fx-background-color: #8a4242;" text="Salvează!" textFill="#d0a3a3">
-         <font>
-            <Font name="Impact" size="31.0" />
-         </font></Button>
-      <Text fill="#400e0e" layoutX="13.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pagină Client/Antrenor" wrappingWidth="412.01202392578125">
-         <font>
-            <Font name="Impact" size="42.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="160.0" fitWidth="125.0" layoutX="442.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@output-onlinepngtools(1).png" />
-         </image>
-      </ImageView>
+            <font>
+                <Font name="Impact" size="31.0" />
+            </font></Button>
+        <Text fill="#400e0e" layoutX="13.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pagină Client" wrappingWidth="412.01202392578125">
+            <font>
+                <Font name="Impact" size="42.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="160.0" fitWidth="125.0" layoutX="442.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@output-onlinepngtools(1).png" />
+            </image>
+        </ImageView>
     </children>
 </AnchorPane>
