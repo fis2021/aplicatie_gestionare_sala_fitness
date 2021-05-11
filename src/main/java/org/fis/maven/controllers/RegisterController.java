@@ -82,11 +82,11 @@ public class RegisterController {
                     reg.setPasswordField(passwordField);
                     reg.setRole(role);
                 }else if (((String) role.getValue()).equals("Antrenor")) {
-                    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("registerCustomer.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("registerTrainer.fxml"));
                     Parent root = (Parent) loader.load();
                     stage.setScene(new Scene(root));
                     stage.show();
-                    RegisterAdministratorController reg = loader.getController();
+                    RegisterTrainerController reg = loader.getController();
                     reg.setUsernameField(usernameField);
                     reg.setPasswordField(passwordField);
                     reg.setRole(role);

@@ -23,17 +23,17 @@
             <Image url="@output-onlinepngtools(1).png" />
          </image>
       </ImageView>
-      <Button fx:id="flightListButton" layoutX="174.0" layoutY="118.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="191.0" style="-fx-background-color: #8a4242;" text="Editare Program" textFill="#d0a3a3">
+      <Button fx:id="editProgramButton" layoutX="174.0" layoutY="118.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="191.0" style="-fx-background-color: #8a4242;" text="Editare Program" textFill="#d0a3a3">
          <font>
             <Font name="Times New Roman" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="addButton" layoutX="58.0" layoutY="246.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: #8a4242;" text="Gestionare Participanți" textFill="#d0a3a3">
+      <Button fx:id="addparticipantsButton" layoutX="58.0" layoutY="246.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: #8a4242;" text="Gestionare Participanți" textFill="#d0a3a3">
          <font>
             <Font name="Times New Roman" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="editButton" layoutX="329.0" layoutY="246.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="222.0" style="-fx-background-color: #8a4242;" text="Gestionare Antrenori" textFill="#d0a3a3">
+      <Button fx:id="edittrainersButton" layoutX="329.0" layoutY="246.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="222.0" style="-fx-background-color: #8a4242;" text="Gestionare Antrenori" textFill="#d0a3a3">
          <font>
             <Font name="Times New Roman" size="20.0" />
          </font>
