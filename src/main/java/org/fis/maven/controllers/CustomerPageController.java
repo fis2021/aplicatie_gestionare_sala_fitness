@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import java.io.IOException;
 public class CustomerPageController {
+
     @FXML
     private Button gymdetailsButton;
     @FXML

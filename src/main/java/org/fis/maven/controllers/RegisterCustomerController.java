@@ -10,13 +10,14 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.fis.maven.services.UserService;
 public class RegisterCustomerController {
+
     private String usernameField;
     private String passwordField;
     private String role;
     @FXML
     private TextField name;
     @FXML
-    private TextField phoneNumber;
+    private TextField  phoneNumber;
     @FXML
     private TextField eMail;
     @FXML

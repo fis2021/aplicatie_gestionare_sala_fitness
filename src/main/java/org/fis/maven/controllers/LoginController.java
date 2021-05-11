@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.Objects;
 import static org.fis.maven.services.UserService.getUsers;
 public class LoginController {
+
     @FXML
     TextField username;
     @FXML
@@ -66,13 +67,13 @@ public class LoginController {
                 window.show();
             }
         } catch (WrongPasswordException e) {
-            password.clear();
+            password. clear();
         }
     }
     public void goToRegistration(javafx.event.ActionEvent register) throws IOException {
         FXMLLoader Loader = new FXMLLoader();
         Loader.setLocation(getClass().getClassLoader().getResource("register.fxml"));
-        Parent viewRegister = Loader.load();
+        Parent viewRegister = Loader. load();
         Scene RegisterScene = new Scene(viewRegister, 650, 450);
         Stage window = (Stage) ((Node) register.getSource()).getScene().getWindow();
         window.setScene(RegisterScene);
