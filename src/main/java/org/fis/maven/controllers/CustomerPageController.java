@@ -9,15 +9,15 @@ import javafx.stage.Stage;
 import java.io.IOException;
 public class CustomerPageController {
     @FXML
+    private Button gymdetailsButton;
+    @FXML
+    private Button selecttrainerButton;
+    @FXML
+    private Button personalevolutionButton;
+    @FXML
+    private Button selectprogramButton;
+    @FXML
     private Button logoutButton;
-    @FXML
-    private Button flightListButton;
-    @FXML
-    private Button enrolledListButton;
-    @FXML
-    private Button paymentButton;
-    @FXML
-    private Button accountButton;
     @FXML
     public void handleLogout(javafx.event.ActionEvent login) throws IOException {
         FXMLLoader Loader = new FXMLLoader();

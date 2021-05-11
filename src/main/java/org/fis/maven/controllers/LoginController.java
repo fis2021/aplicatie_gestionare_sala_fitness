@@ -38,7 +38,7 @@ public class LoginController {
                     this.loggedRole = user.getRole();
                 }
             }
-            if(loggedRole.equals("Customer")) {
+            if(loggedRole.equals("Client")) {
                 FXMLLoader Loader = new FXMLLoader();
                 Loader.setLocation(getClass().getClassLoader().getResource("customerPage.fxml"));
                 Parent viewCustomerPage = Loader.load();
@@ -47,7 +47,16 @@ public class LoginController {
                 window.setScene(customerPageScene);
                 window.show();
             }
-            if (loggedRole.equals("Administrator")) {
+            if(loggedRole.equals("Antrenor")) {
+                FXMLLoader Loader = new FXMLLoader();
+                Loader.setLocation(getClass().getClassLoader().getResource("trainerPage.fxml"));
+                Parent viewTrainerPage = Loader.load();
+                Scene trainerPageScene = new Scene(viewTrainerPage, 650, 450);
+                Stage window = (Stage) ((Node) homepage.getSource()).getScene().getWindow();
+                window.setScene(trainerPageScene);
+                window.show();
+            }
+            if (loggedRole.equals("Manager")) {
                 FXMLLoader Loader = new FXMLLoader();
                 Loader.setLocation(getClass().getClassLoader().getResource("administratorPage.fxml"));
                 Parent viewAdministratorPage = Loader.load();

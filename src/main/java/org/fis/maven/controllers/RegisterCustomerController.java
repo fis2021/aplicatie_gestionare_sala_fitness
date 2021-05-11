@@ -21,23 +21,27 @@ public class RegisterCustomerController {
     private TextField eMail;
     @FXML
     private Button saveButton;
+
     @FXML
     public void handleRegisterClient() throws Exception {
         try {
             UserService.addUser(usernameField, passwordField, role, name.getText(), eMail.getText(), phoneNumber.getText());
-            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("customerPage.fxml"));
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("customerPage.fxml"));
             Stage stage = (Stage) (saveButton.getScene().getWindow());
             stage.setScene(new Scene(root));
         } catch (Exception e) {
             System.out.println("Eroare!!");
         }
     }
+
     public void setUsernameField(TextField username) {
         this.usernameField = username.getText();
     }
+
     public void setPasswordField(PasswordField password) {
         this.passwordField = password.getText();
     }
+
     public void setRole(ChoiceBox<String> role) {
         this.role = role.getValue();
     }
