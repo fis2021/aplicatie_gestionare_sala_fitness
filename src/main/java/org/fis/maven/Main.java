@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.fis.maven.services.FileSystemService;
 import org.fis.maven.services.UserService;
-
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 public class Main extends Application {
