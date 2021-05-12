@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="489.0" prefWidth="682.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis.maven.controllers.viewGymProgramCustomerController">
+   <children>
+      <Text fill="#400e0e" layoutX="129.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Programul Sălii și Antrenamentele Dsponibile">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="ListaPrograme" layoutX="127.0" layoutY="80.0" prefHeight="330.0" prefWidth="428.0" />
+      <Button fx:id="backButton" layoutX="252.0" layoutY="426.0" mnemonicParsing="false" onAction="#goBack" prefHeight="49.0" prefWidth="179.0" style="-fx-background-color: #8a4242;" text="Back" textFill="#d0a3a3">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
