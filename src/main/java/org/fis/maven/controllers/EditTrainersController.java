@@ -41,7 +41,7 @@ public class EditTrainersController {
         FXMLLoader Loader = new FXMLLoader();
         Loader.setLocation(getClass().getClassLoader().getResource("administratorPage.fxml"));
         Parent viewRegister = Loader.load();
-        Scene RegisterScene = new Scene(viewRegister, 650, 450);
+        Scene RegisterScene = new Scene(viewRegister, 651, 450);
         Stage window = (Stage) ((Node) register.getSource()).getScene().getWindow();
         window.setScene(RegisterScene);
         window.show();
