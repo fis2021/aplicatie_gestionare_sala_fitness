@@ -19,7 +19,7 @@
             <Font name="Impact" size="25.0" />
          </font>
       </Button>
-      <Button fx:id="trainersButton" layoutX="78.0" layoutY="234.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="223.0" style="-fx-background-color: #8a4242;" text="Antrenori" textFill="#d0a3a3">
+      <Button fx:id="trainersButton" layoutX="78.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleViewTrainers" prefHeight="66.0" prefWidth="223.0" style="-fx-background-color: #8a4242;" text="Antrenori" textFill="#d0a3a3">
          <font>
             <Font name="Impact" size="29.0" />
          </font>
@@ -35,6 +35,11 @@
          </image>
       </ImageView>
       <Button fx:id="logoutButton" layoutX="252.0" layoutY="447.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="59.0" prefWidth="190.0" style="-fx-background-color: #8a4242;" text="Logout" textFill="#d0a3a3">
+         <font>
+            <Font name="Impact" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="backButton" layoutX="32.0" layoutY="447.0" mnemonicParsing="false" onAction="#goBack" onDragDetected="#goBack" prefHeight="59.0" prefWidth="190.0" style="-fx-background-color: #8a4242;" text="Back" textFill="#d0a3a3">
          <font>
             <Font name="Impact" size="25.0" />
          </font>
