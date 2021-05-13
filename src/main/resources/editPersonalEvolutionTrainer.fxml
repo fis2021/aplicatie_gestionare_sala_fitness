@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="619.0" prefWidth="748.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis.maven.controllers.personalevolutionCustomerTrainerController">
+   <children>
+      <Text fill="#400e0e" layoutX="180.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editare Detalii Client">
+         <font>
+            <Font name="Impact" size="41.0" />
+         </font>
+      </Text>
+      <Text fill="#400e0e" layoutX="102.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vă rugăm introduceți un nume din baza de date a clienților!" />
+      <Text fill="#400e0e" layoutX="36.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nume:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#400e0e" layoutX="36.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kilograme:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#400e0e" layoutX="36.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Înalțimea:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#400e0e" layoutX="35.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Centimetrii taliei:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#400e0e" layoutX="32.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-partea cea mai îngustă-">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nameField" layoutX="143.0" layoutY="130.0" prefHeight="25.0" prefWidth="245.0" />
+      <TextArea fx:id="ListaClienti" layoutX="352.0" layoutY="336.0" prefHeight="262.0" prefWidth="343.0" />
+      <TextField fx:id="kilograms" layoutX="143.0" layoutY="171.0" prefHeight="25.0" prefWidth="96.0" />
+      <TextField fx:id="hightCentimeters" layoutX="143.0" layoutY="228.0" prefHeight="25.0" prefWidth="96.0" />
+      <TextField fx:id="waistCentimeters" layoutX="191.0" layoutY="293.0" prefHeight="25.0" prefWidth="96.0" />
+      <ImageView fitHeight="178.0" fitWidth="200.0" layoutX="468.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cantar.png" />
+         </image>
+      </ImageView>
+      <Text fill="#400e0e" layoutX="361.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Baza de Date a Cliențior">
+         <font>
+            <Font name="Impact" size="31.0" />
+         </font>
+      </Text>
+      <Button fx:id="backButton" layoutX="52.0" layoutY="539.0" mnemonicParsing="false" onAction="#goBack" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: #8a4242;" text="Back" textFill="#d0a3a3">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="saveButton" layoutX="75.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="45.0" prefWidth="182.0" style="-fx-background-color: #8a4242;" text="Salvează!" textFill="#d0a3a3">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Text fx:id="text" layoutX="78.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="182.0" />
+   </children>
+</AnchorPane>
