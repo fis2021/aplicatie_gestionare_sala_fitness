@@ -69,15 +69,15 @@ public class UserService {
 
     public static void fileProgram(String Nume, String Email, String Telefon) throws NullPointerException
     {
-        for (User u : userRepository.find()) {
-            if (Nume.equals(u.getname())) {
+        for (User x : userRepository.find()) {
+            if (Nume.equals(x.getname())) {
 
-                if(Email.equals( u.geteMail()))
+                if(Email.equals( x.geteMail()))
                 {
-                    if(Telefon.equals(u.getphoneNumber()))
+                    if(Telefon.equals(x.getphoneNumber()))
                     {
 
-                            userRepository.remove(u);
+                            userRepository.remove(x);
 
                     }
                 }
