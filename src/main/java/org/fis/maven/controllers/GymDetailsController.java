@@ -19,6 +19,8 @@ public class GymDetailsController {
     private Button trainersButton;
     @FXML
     private Button logoutButton;
+    @FXML
+    private Button backButton;
 
     @FXML
     public void handleLogout(javafx.event.ActionEvent login) throws IOException {
@@ -39,6 +41,27 @@ public class GymDetailsController {
         Scene LoginScene = new Scene(viewLogin, 690, 490);
         Stage window = (Stage) ((Node) login.getSource()).getScene().getWindow();
         window.setScene(LoginScene);
+        window.show();
+    }
+
+    @FXML
+    public void handleViewTrainers(javafx.event.ActionEvent login) throws IOException {
+        FXMLLoader Loader = new FXMLLoader();
+        Loader.setLocation(getClass().getClassLoader().getResource("viewTrainersCustomer.fxml"));
+        Parent viewLogin = Loader.load();
+        Scene LoginScene = new Scene(viewLogin, 662, 497);
+        Stage window = (Stage) ((Node) login.getSource()).getScene().getWindow();
+        window.setScene(LoginScene);
+        window.show();
+    }
+
+    public void goBack(javafx.event.ActionEvent register) throws IOException {
+        FXMLLoader Loader = new FXMLLoader();
+        Loader.setLocation(getClass().getClassLoader().getResource("customerPage.fxml"));
+        Parent viewRegister = Loader.load();
+        Scene RegisterScene = new Scene(viewRegister, 610, 440);
+        Stage window = (Stage) ((Node) register.getSource()).getScene().getWindow();
+        window.setScene(RegisterScene);
         window.show();
     }
 }
