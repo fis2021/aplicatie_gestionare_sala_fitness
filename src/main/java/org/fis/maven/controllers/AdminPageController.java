@@ -60,11 +60,10 @@ public class AdminPageController {
         FXMLLoader Loader = new FXMLLoader();
         Loader.setLocation(getClass().getClassLoader().getResource("editParticipantsPage.fxml"));
         Parent viewLogin = Loader.load();
-        Scene LoginScene = new Scene(viewLogin, 706, 635);
+        Scene LoginScene = new Scene(viewLogin, 707, 635);
         Stage window = (Stage) ((Node) login.getSource()).getScene().getWindow();
         window.setScene(LoginScene);
         window.show();
     }
-
 
 }
