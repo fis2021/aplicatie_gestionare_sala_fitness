@@ -14,7 +14,7 @@
    <children>
       <Text fill="#400e0e" layoutX="183.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editare Participanți">
          <font>
-            <Font name="Impact" size="43.0" />
+            <Font name="Impact" size="42.0" />
          </font>
       </Text>
       <Text fill="#400e0e" layoutX="65.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nume">
