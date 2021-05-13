@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane prefHeight="437.0" prefWidth="642.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis.maven.controllers.LoginController">
+   <children>
+      <Button layoutX="263.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleLoginAction" prefHeight="37.0" prefWidth="86.0" style="-fx-background-color: #8a4242;" text="Log In" textFill="#d0a3a3">
+         <font>
+            <Font name="Times New Roman" size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="412.0" layoutY="371.0" mnemonicParsing="false" onAction="#goToRegistration" prefHeight="38.0" prefWidth="205.0" style="-fx-background-color: #8a4242;" text="Înregistrează-te aici!" textFill="#d0a3a3">
+         <font>
+            <Font name="Times New Roman" size="19.0" />
+         </font>
+      </Button>
+      <Text fill="#460606" layoutX="427.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nu ești încă înregistrat?">
+         <font>
+            <Font name="Times New Roman" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#460606" layoutX="72.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logare " textAlignment="CENTER" wrappingWidth="497.46417236328125">
+         <font>
+            <Font name="Impact" size="45.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="189.0" fitWidth="216.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@output-onlinepngtools.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="username" layoutX="215.0" layoutY="173.0" prefHeight="31.0" prefWidth="182.0" promptText="*Username" />
+      <ImageView fitHeight="198.0" fitWidth="182.0" layoutX="438.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@output-onlinepngtools(2).png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="password" layoutX="215.0" layoutY="218.0" prefHeight="31.0" prefWidth="182.0" promptText="*Parolă" />
+      <ChoiceBox fx:id="role" layoutX="231.0" layoutY="273.0" prefWidth="150.0" style="-fx-background-color: #8a4242;" />
+   </children>
+</AnchorPane>
