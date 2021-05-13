@@ -25,7 +25,7 @@
       </ImageView>
       <Button fx:id="editProgramButton" layoutX="174.0" layoutY="118.0" mnemonicParsing="false" onAction="#editProgram" prefHeight="50.0" prefWidth="191.0" style="-fx-background-color: #8a4242;" text="Editare Program" textFill="#d0a3a3">
          <font>
-            <Font name="Times New Roman" size="20.0" />
+            <Font name="Times New Roman" size="21.0" />
          </font>
       </Button>
       <Button fx:id="addparticipantsButton" layoutX="58.0" layoutY="246.0" mnemonicParsing="false" onAction="#editParticipants" prefHeight="50.0" prefWidth="212.0" style="-fx-background-color: #8a4242;" text="Gestionare Participanți" textFill="#d0a3a3">
