@@ -24,7 +24,7 @@
             <Font size="29.0" />
          </font>
       </Button>
-      <Button fx:id="viewClientsButton" layoutX="149.0" layoutY="298.0" mnemonicParsing="false" style="-fx-background-color: #8a4242;" text="Vizualizare Clienți" textFill="#d0a3a3">
+      <Button fx:id="viewClientsButton" layoutX="149.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleGoToClients" style="-fx-background-color: #8a4242;" text="Vizualizare Clienți" textFill="#d0a3a3">
          <font>
             <Font size="27.0" />
          </font>

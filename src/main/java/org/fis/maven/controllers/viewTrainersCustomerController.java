@@ -23,6 +23,7 @@ public class viewTrainersCustomerController {
     @FXML
     private TextArea ListaPrograme;
 
+    @FXML
     public void goBack(javafx.event.ActionEvent register) throws IOException {
         FXMLLoader Loader = new FXMLLoader();
         Loader.setLocation(getClass().getClassLoader().getResource("gymDetails.fxml"));

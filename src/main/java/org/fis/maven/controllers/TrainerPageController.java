@@ -40,4 +40,16 @@ public class TrainerPageController {
         window.setScene(LoginScene);
         window.show();
     }
+
+    @FXML
+    public void handleGoToClients(javafx.event.ActionEvent login) throws IOException {
+        FXMLLoader Loader = new FXMLLoader();
+        Loader.setLocation(getClass().getClassLoader().getResource("viewCustomersTrainer.fxml"));
+        Parent viewLogin = Loader.load();
+        Scene LoginScene = new Scene(viewLogin, 607, 485);
+        Stage window = (Stage) ((Node) login.getSource()).getScene().getWindow();
+        window.setScene(LoginScene);
+        window.show();
+    }
+
 }
