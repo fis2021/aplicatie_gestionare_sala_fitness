@@ -7,26 +7,29 @@ public class GymProgram {
     private String Ziua;
     private String Ora;
     private String Descriere;
+
     public GymProgram(String Antrenament, String Ziua, String Ora, String Descriere) {
         this.Antrenament = Antrenament;
         this.Ziua = Ziua;
         this.Ora = Ora;
         this.Descriere = Descriere;
+
     }
     public GymProgram() {
     }
-    public String getAntrenament() {
+    public String getAntrenament(){
         return this.Antrenament;
     }
-    public String getZiua() {
+    public String getZiua(){
         return this.Ziua;
     }
-    public String getOra() {
+    public String getOra(){
         return this.Ora;
     }
-    public String getDescriere() {
-        return this.Antrenament;
+    public String getDescriere(){
+        return this.Descriere;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -38,4 +41,5 @@ public class GymProgram {
         if (!Objects.equals(Descriere, gymProgram.Descriere)) return false;
         return true;
     }
+
 }
