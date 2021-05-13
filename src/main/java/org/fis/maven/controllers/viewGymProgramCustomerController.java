@@ -25,7 +25,7 @@ public class viewGymProgramCustomerController {
         FXMLLoader Loader = new FXMLLoader();
         Loader.setLocation(getClass().getClassLoader().getResource("gymDetails.fxml"));
         Parent viewRegister = Loader.load();
-        Scene RegisterScene = new Scene(viewRegister, 650, 450);
+        Scene RegisterScene = new Scene(viewRegister, 695, 535);
         Stage window = (Stage) ((Node) register.getSource()).getScene().getWindow();
         window.setScene(RegisterScene);
         window.show();
