@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="607.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis.maven.controllers.CustomerPageController">
     <children>
         <Label layoutX="14.0" layoutY="14.0" prefHeight="50.0" prefWidth="378.0" text="Pagină Client" textFill="#400e0e">
@@ -13,33 +15,34 @@
             </font>
         </Label>
         <Button fx:id="logoutButton" layoutX="487.0" layoutY="372.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="57.0" prefWidth="109.0" style="-fx-background-color: #8a4242;" text="Logout" textFill="#d0a3a3">
-            <font>
-                <Font name="Centaur" size="27.0" />
-            </font></Button>
-        <ImageView fitHeight="218.0" fitWidth="222.0" layoutX="385.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@output-onlinepngtools(1).png" />
-            </image>
-        </ImageView>
-        <Button fx:id="selecttrainerButton" layoutX="43.0" layoutY="170.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Selectare Antrenor" textFill="#d0a3a3">
-            <font>
-                <Font name="Impact" size="24.0" />
-            </font>
-        </Button>
-        <Button fx:id="gymdetailsButton" layoutX="43.0" layoutY="109.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Detaliile Sălii" textFill="#d0a3a3">
-            <font>
-                <Font name="Impact" size="24.0" />
-            </font>
-        </Button>
-        <Button fx:id="personalevolutionButton" layoutX="43.0" layoutY="236.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Evoluție Personală" textFill="#d0a3a3">
-            <font>
-                <Font name="Impact" size="24.0" />
-            </font>
-        </Button>
-        <Button fx:id="selectprogramButton" layoutX="43.0" layoutY="303.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Selectare Program" textFill="#d0a3a3">
-            <font>
-                <Font name="Impact" size="24.0" />
-            </font>
-        </Button>
+         <font>
+            <Font name="Centaur" size="27.0" />
+         </font></Button>
+      <ImageView fitHeight="218.0" fitWidth="222.0" layoutX="385.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@output-onlinepngtools(1).png" />
+         </image>
+      </ImageView>
+      <Button fx:id="selecttrainerButton" layoutX="43.0" layoutY="170.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Selectare Antrenor" textFill="#d0a3a3">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="gymdetailsButton" layoutX="43.0" layoutY="109.0" mnemonicParsing="false" onAction="#showGymDetails" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Detaliile Sălii" textFill="#d0a3a3">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="personalevolutionButton" layoutX="43.0" layoutY="236.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Evoluție Personală" textFill="#d0a3a3">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="selectprogramButton" layoutX="43.0" layoutY="303.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Selectare Program" textFill="#d0a3a3">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>
+
