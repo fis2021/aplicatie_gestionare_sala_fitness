@@ -49,6 +49,17 @@ public class UserService {
         return antrenori;
     }
 
+    public static ArrayList<User> getClienti(){
+        ArrayList<User> clienti= new ArrayList<User>();
+        for(User c:userRepository.find()){
+            if(Objects.equals(c.getRole(),"Client"))
+            {
+                clienti.add(c);
+            }
+        }
+        return clienti;
+    }
+
     public static boolean checkUserDoesAlreadyExist(String username, String password) throws IncorrectPasswordException {
         for (User user : userRepository.find()) {
             if (Objects.equals(username, user.getUsername())) {
