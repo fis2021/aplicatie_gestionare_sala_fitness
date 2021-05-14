@@ -1,4 +1,5 @@
 package org.fis.maven.controllers;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -9,19 +10,21 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import org.fis.maven.model.GymProgram;
+import org.fis.maven.model.User;
 import org.fis.maven.services.GymProgramService;
+import org.fis.maven.services.UserService;
+
 import java.io.IOException;
 import java.util.ArrayList;
-public class EditProgramController {
+
+public class EditTrainersController {
+
     @FXML
-    TextField Antrenament;
+    TextField Nume;
     @FXML
-    TextField Ziua;
+    TextField Email;
     @FXML
-    TextField Ora;
-    @FXML
-    TextField Descriere;
+    TextField Telefon;
     @FXML
     private Button AddButton;
     @FXML
@@ -29,21 +32,39 @@ public class EditProgramController {
     @FXML
     private Button BackButton;
     @FXML
-    private TextArea ListaPrograme;
+    private TextArea ListaAntrenori;
     @FXML
     private Text text;
+
+    @FXML
     public void goBack(javafx.event.ActionEvent register) throws IOException {
         FXMLLoader Loader = new FXMLLoader();
         Loader.setLocation(getClass().getClassLoader().getResource("administratorPage.fxml"));
         Parent viewRegister = Loader.load();
-        Scene RegisterScene = new Scene(viewRegister, 650, 450);
+        Scene RegisterScene = new Scene(viewRegister, 651, 450);
         Stage window = (Stage) ((Node) register.getSource()).getScene().getWindow();
         window.setScene(RegisterScene);
         window.show();
     }
+
+    @FXML
+    public void initialize(){
+        ArrayList<User> antrenori= UserService.getAntrenori();
+        String s="Nume          E-mail           Nr.Telefon    \n ";
+        for(User antrenor:antrenori){
+            s=s+antrenor.getname()+"     "+antrenor.geteMail()+"     "+antrenor.getphoneNumber()+"\n";
+
+        }
+        ListaAntrenori.setText(s);
+
+
+    }
+
+
+    @FXML
     public void handleAdd() {
         try {
-            GymProgramService.addGymProgram(Antrenament.getText(), Ziua.getText(), Ora.getText(), Descriere.getText());
+            UserService.addUser(Nume.getText(),"ParolaAntrenor","Antrenor",Nume.getText(), Email.getText(), Telefon.getText());
             text.setText("Adaugare Reusita!");
             initialize();
         } catch (NullPointerException e)
@@ -52,9 +73,10 @@ public class EditProgramController {
             text.setText("Adaugare Nereusita");
         }
     }
+
     public void handleDelete() {
         try {
-            GymProgramService.deleteGymProgram(Antrenament.getText(), Ziua.getText(), Ora.getText(), Descriere.getText());
+            UserService.deleteTrainer_User(Nume.getText(), Email.getText(), Telefon.getText());
             initialize();
             text.setText("Stergere Reusita!");
         } catch (NullPointerException e)
@@ -62,15 +84,5 @@ public class EditProgramController {
             e.printStackTrace();
             text.setText("Stergere Nereusita");
         }
-    }
-    @FXML
-    public void initialize(){
-        ArrayList<GymProgram> programe= GymProgramService.getPrograms();
-        String s="Antrenament         Ziua        Ora          Descriere       \n ";
-        for(GymProgram gym:programe){
-            s=s+" "+gym.getAntrenament()+"      "+gym.getZiua()+"      "+gym.getOra()+"     "+gym.getDescriere()+"\n";
-        }
-        ListaPrograme.setText(s);
-
     }
 }
