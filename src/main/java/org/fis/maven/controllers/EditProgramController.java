@@ -34,7 +34,7 @@ public class EditProgramController {
     private Text text;
     public void goBack(javafx.event.ActionEvent register) throws IOException {
         FXMLLoader Loader = new FXMLLoader();
-        Loader.setLocation(getClass().getClassLoader().getResource("trainerPage.fxml"));
+        Loader.setLocation(getClass().getClassLoader().getResource("administratorPage.fxml"));
         Parent viewRegister = Loader.load();
         Scene RegisterScene = new Scene(viewRegister, 650, 450);
         Stage window = (Stage) ((Node) register.getSource()).getScene().getWindow();
