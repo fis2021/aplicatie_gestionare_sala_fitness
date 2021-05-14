@@ -4,6 +4,7 @@ import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.fis.maven.exceptions.IncorrectPasswordException;
 import org.fis.maven.exceptions.WrongPasswordException;
+import org.fis.maven.model.GymProgram;
 import org.fis.maven.model.User;
 
 import java.nio.charset.StandardCharsets;
@@ -58,6 +59,31 @@ public class UserService {
             }
         }
         return clienti;
+    }
+
+    public static void deleteTrainer_User(String Nume, String Email, String Telefon)
+            throws NullPointerException{
+
+        fileProgram(Nume, Email, Telefon);
+    }
+
+    public static void fileProgram(String Nume, String Email, String Telefon) throws NullPointerException
+    {
+        for (User x : userRepository.find()) {
+            if (Nume.equals(x.getname())) {
+
+                if(Email.equals( x.geteMail()))
+                {
+                    if(Telefon.equals(x.getphoneNumber()))
+                    {
+
+                        userRepository.remove(x);
+
+                    }
+                }
+            }
+        }
+
     }
 
     public static boolean checkUserDoesAlreadyExist(String username, String password) throws IncorrectPasswordException {
