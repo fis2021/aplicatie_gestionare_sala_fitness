@@ -4,9 +4,9 @@ import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.fis.maven.model.CustomerEvolution;
 
-
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 
 import static org.fis.maven.services.FileSystemService.getPathToFile;
 
@@ -22,10 +22,20 @@ public class CustomerEvolutionService {
         customerEvolutionRepository = database.getRepository(CustomerEvolution.class);
     }
 
-    public static void addCustomerEvolution(String name, String Kg, String Inaltimea,String CentimetriiTaliei)
-            throws NullPointerException{
+    public static void addCustomerEvolution(String name, String Kg, String Inaltimea, String CentimetriiTaliei)
+            throws NullPointerException {
 
         customerEvolutionRepository.insert(new CustomerEvolution(name, Kg, Inaltimea, CentimetriiTaliei));
+    }
+
+    public static ArrayList<CustomerEvolution> getevolutii(){
+        ArrayList<CustomerEvolution> evolutii= new ArrayList<CustomerEvolution>();
+        for(CustomerEvolution c:customerEvolutionRepository.find()){
+            {
+                evolutii.add(c);
+            }
+        }
+        return evolutii;
     }
 
 

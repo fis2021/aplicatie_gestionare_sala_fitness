@@ -44,4 +44,17 @@ public class CustomerPageController {
         window.setScene(LoginScene);
         window.show();
     }
+
+    @FXML
+    public void handlePersonalEvolution(javafx.event.ActionEvent login) throws IOException {
+        FXMLLoader Loader = new FXMLLoader();
+        Loader.setLocation(getClass().getClassLoader().getResource("viewpersonalevolutionCustomer.fxml"));
+        Parent viewLogin = Loader.load();
+        Scene LoginScene = new Scene(viewLogin, 600, 400);
+        Stage window = (Stage) ((Node) login.getSource()).getScene().getWindow();
+        window.setScene(LoginScene);
+        window.show();
+    }
+
+
 }
