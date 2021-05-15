@@ -3,6 +3,7 @@ package org.fis.maven.services;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.fis.maven.exceptions.IncorrectPasswordException;
+import org.fis.maven.exceptions.UsernameAlreadyExistsException;
 import org.fis.maven.exceptions.WrongPasswordException;
 import org.fis.maven.model.GymProgram;
 import org.fis.maven.model.User;
@@ -11,6 +12,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import static org.fis.maven.services.FileSystemService.getPathToFile;
@@ -18,9 +20,12 @@ import static org.fis.maven.services.FileSystemService.getPathToFile;
 public class UserService {
 
     private static ObjectRepository<User> userRepository;
+    private static Nitrite database;
 
     public static void initDatabase() {
-        Nitrite database = Nitrite.builder()
+
+        FileSystemService.initDirectory();
+        database = Nitrite.builder()
                 .filePath(getPathToFile("Sala_Fitness.db").toFile())
                 .openOrCreate("test", "test");
 
@@ -30,6 +35,7 @@ public class UserService {
     public static void addUser(String username, String password, String role, String name, String eMail, String phoneNumber) {
         userRepository.insert(new User(username, encodePassword(username, password), role, name, eMail, phoneNumber));
     }
+
 
     public static void addUser(String username, String password, String role, String name, String eMail, String phoneNumber, String personalKey) {
         userRepository.insert(new User(username, encodePassword(username, password), role, name, eMail, phoneNumber, personalKey));
@@ -61,6 +67,11 @@ public class UserService {
         return clienti;
     }
 
+    public static List<User> getAllUsers()
+    {
+        return userRepository.find().toList();
+    }
+
     public static void deleteTrainer_User(String Nume, String Email, String Telefon)
             throws NullPointerException{
 
@@ -86,13 +97,14 @@ public class UserService {
 
     }
 
-    public static boolean checkUserDoesAlreadyExist(String username, String password) throws IncorrectPasswordException {
+    public static boolean checkUserDoesAlreadyExist(String username) throws UsernameAlreadyExistsException {
         for (User user : userRepository.find()) {
             if (Objects.equals(username, user.getUsername())) {
-                if(!Objects.equals(user.getPassword(), encodePassword(username,password)))
-                    throw new IncorrectPasswordException(password);
-                else return true;
+
+                    throw new UsernameAlreadyExistsException(username);
+
             }
+            else return true;
         }
         return false;
     }
@@ -111,7 +123,7 @@ public class UserService {
         }
     }
 
-    private static String encodePassword(String salt, String password) {
+     static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();
         md.update(salt.getBytes(StandardCharsets.UTF_8));
 
@@ -131,5 +143,10 @@ public class UserService {
         }
         return md;
     }
+
     public static ObjectRepository<User> getUsers() {return userRepository;}
+
+    public static Nitrite getDatabase() {
+        return database;
+    }
 }
