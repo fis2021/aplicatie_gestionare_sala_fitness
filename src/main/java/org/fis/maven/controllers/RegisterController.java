@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.fis.maven.exceptions.IncorrectPasswordException;
+import org.fis.maven.exceptions.UsernameAlreadyExistsException;
 import org.fis.maven.services.UserService;
 
 import java.io.IOException;
@@ -40,11 +41,11 @@ public class RegisterController {
         try {
             Stage stage = new Stage();
 
-            boolean test = UserService.checkUserDoesAlreadyExist(usernameField.getText(), passwordField.getText());
+            boolean test = UserService.checkUserDoesAlreadyExist(usernameField.getText());
             Stage primaryStage = (Stage) registerButton.getScene().getWindow();
             primaryStage.close();
-            if(test) {
-                if(((String) role.getValue()).equals("Client")) {
+            if (test) {
+                if (((String) role.getValue()).equals("Client")) {
                     FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("customerPage.fxml"));
                     Parent root = (Parent) loader.load();
                     stage.setScene(new Scene(root));
@@ -62,7 +63,7 @@ public class RegisterController {
                 }
             }
 
-            if(!test) {
+            if (!test) {
                 if (((String) role.getValue()).equals("Client")) {
                     FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("registerCustomer.fxml"));
                     Parent root = (Parent) loader.load();
@@ -81,7 +82,7 @@ public class RegisterController {
                     reg.setUsernameField(usernameField);
                     reg.setPasswordField(passwordField);
                     reg.setRole(role);
-                }else if (((String) role.getValue()).equals("Antrenor")) {
+                } else if (((String) role.getValue()).equals("Antrenor")) {
                     FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("registerTrainer.fxml"));
                     Parent root = (Parent) loader.load();
                     stage.setScene(new Scene(root));
@@ -92,7 +93,7 @@ public class RegisterController {
                     reg.setRole(role);
                 }
             }
-        } catch (IncorrectPasswordException e) {
+        } catch (UsernameAlreadyExistsException e) {
             message.setText(e.getMessage());
         } catch (IOException e) {
             System.out.println("Eroare!!");
