@@ -32,9 +32,9 @@
             <Font name="Impact" size="29.0" />
          </font>
       </Text>
-      <TextField fx:id="Nume" layoutX="192.0" layoutY="99.0" prefHeight="25.0" prefWidth="243.0" />
-      <TextField fx:id="Email" layoutX="192.0" layoutY="178.0" prefHeight="25.0" prefWidth="243.0" />
-      <TextField fx:id="Telefon" layoutX="209.0" layoutY="251.0" prefHeight="25.0" prefWidth="243.0" />
+      <TextField fx:id="Nume" id="nume" layoutX="192.0" layoutY="99.0" prefHeight="25.0" prefWidth="243.0" />
+      <TextField fx:id="Email" id="email" layoutX="192.0" layoutY="178.0" prefHeight="25.0" prefWidth="243.0" />
+      <TextField fx:id="Telefon" id="tel" layoutX="209.0" layoutY="251.0" prefHeight="25.0" prefWidth="243.0" />
       <Text fill="#400e0e" layoutX="68.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vă rugăm introduceți datele exact ca in baza de date!">
          <font>
             <Font size="13.0" />
@@ -42,7 +42,7 @@
       </Text>
       <ImageView fitHeight="169.0" fitWidth="203.0" layoutX="493.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images.jpg" />
+            <Image url="@images.png" />
          </image>
       </ImageView>
       <TextArea fx:id="ListaAntrenori" layoutX="340.0" layoutY="356.0" prefHeight="240.0" prefWidth="372.0" />
@@ -51,17 +51,17 @@
             <Font name="Impact" size="40.0" />
          </font>
       </Text>
-      <Button fx:id="AddButton" layoutX="25.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="50.0" prefWidth="126.0" style="-fx-background-color: #8a4242;" text="Adaugă" textFill="#d0a3a3">
+      <Button fx:id="AddButton" id="add" layoutX="25.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="50.0" prefWidth="126.0" style="-fx-background-color: #8a4242;" text="Adaugă" textFill="#d0a3a3">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="DeleteButton" layoutX="192.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="50.0" prefWidth="126.0" style="-fx-background-color: #8a4242;" text="Șterge" textFill="#d0a3a3">
+      <Button fx:id="DeleteButton" id="delete" layoutX="192.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="50.0" prefWidth="126.0" style="-fx-background-color: #8a4242;" text="Șterge" textFill="#d0a3a3">
          <font>
             <Font size="21.0" />
          </font>
       </Button>
-      <Button fx:id="BackButton" layoutX="57.0" layoutY="513.0" mnemonicParsing="false" onAction="#goBack" prefHeight="50.0" prefWidth="126.0" style="-fx-background-color: #8a4242;" text="Back" textFill="#d0a3a3">
+      <Button fx:id="BackButton" id="back" layoutX="57.0" layoutY="513.0" mnemonicParsing="false" onAction="#goBack" prefHeight="50.0" prefWidth="126.0" style="-fx-background-color: #8a4242;" text="Back" textFill="#d0a3a3">
          <font>
             <Font size="20.0" />
          </font>
