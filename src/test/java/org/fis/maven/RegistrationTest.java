@@ -37,8 +37,15 @@ class RegistrationTest {
         robot.clickOn("#password");
         robot.write("password1");
         robot.clickOn("#role");
-        robot.write("Antrenor");
+        robot.clickOn("Antrenor");
         robot.clickOn("#registerButton");
+        robot.clickOn("#name");
+        robot.write("user1");
+        robot.clickOn("#eMail");
+        robot.write("user1@gmail.com");
+        robot.clickOn("#phoneNumber");
+        robot.write("0785643124");
+        robot.clickOn("#saveButton");
 
     }
 
