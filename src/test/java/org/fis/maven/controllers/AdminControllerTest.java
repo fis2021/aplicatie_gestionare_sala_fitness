@@ -19,7 +19,7 @@ package org.fis.maven.controllers;
 
 @ExtendWith(ApplicationExtension.class)
 
-class RegistrationTest {
+class AdminControllerTest {
     @BeforeEach
     void setUp() throws Exception {
         FileSystemService.APPLICATION_FOLDER=".test-registration-example";
