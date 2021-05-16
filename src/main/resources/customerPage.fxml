@@ -23,7 +23,7 @@
             <Image url="@output-onlinepngtools(1).png" />
          </image>
       </ImageView>
-      <Button fx:id="selecttrainerButton" layoutX="43.0" layoutY="170.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Selectare Antrenor" textFill="#d0a3a3">
+      <Button fx:id="selecttrainerButton" layoutX="43.0" layoutY="170.0" mnemonicParsing="false" onAction="#handleSelectTrainer" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Selectare Antrenor" textFill="#d0a3a3">
          <font>
             <Font name="Impact" size="24.0" />
          </font>
@@ -38,7 +38,7 @@
             <Font name="Impact" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="selectprogramButton" layoutX="43.0" layoutY="303.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Selectare Program" textFill="#d0a3a3">
+      <Button fx:id="selectprogramButton" layoutX="43.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleSelectProgram" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Selectare Program" textFill="#d0a3a3">
          <font>
             <Font name="Impact" size="24.0" />
          </font>
