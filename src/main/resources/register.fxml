@@ -11,20 +11,20 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="577.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis.maven.controllers.RegisterController">
-    <TextField fx:id="usernameField" layoutX="168.0" layoutY="160.0" prefHeight="26.0" prefWidth="241.0" promptText="*Username">
+    <TextField fx:id="usernameField" id="username" layoutX="168.0" layoutY="160.0" prefHeight="26.0" prefWidth="241.0" promptText="*Username">
         <font>
             <Font name="Times New Roman" size="14.0" />
         </font></TextField>
-    <PasswordField fx:id="passwordField" layoutX="168.0" layoutY="225.0" prefHeight="26.0" prefWidth="242.0" promptText="*Password">
+    <PasswordField fx:id="passwordField"  id="password" layoutX="168.0" layoutY="225.0" prefHeight="26.0" prefWidth="242.0" promptText="*Password">
         <font>
             <Font name="Times New Roman" size="14.0" />
         </font></PasswordField>
-    <Button fx:id="registerButton" layoutX="230.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleRegisterAction" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #8a4242;" text="Inregistrare!" textAlignment="CENTER" textFill="#d0a3a3">
+    <Button fx:id="registerButton" id="registerButton" layoutX="230.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleRegisterAction" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #8a4242;" text="Inregistrare!" textAlignment="CENTER" textFill="#d0a3a3">
         <font>
             <Font name="Times New Roman" size="15.0" />
         </font>
     </Button>
-    <ChoiceBox fx:id="role" layoutX="214.0" layoutY="269.0" prefWidth="150.0" style="-fx-background-color: #8a4242;">
+    <ChoiceBox fx:id="role"  id="role" layoutX="214.0" layoutY="269.0" prefWidth="150.0" style="-fx-background-color: #8a4242;">
     </ChoiceBox>
     <Text fill="#460606" layoutX="185.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Nou">
         <font>
@@ -41,5 +41,5 @@
             <Image url="@output-onlinepngtools.png" />
         </image>
     </ImageView>
-   <Text fx:id="message" layoutX="185.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="252.13671875" />
+   <Text fx:id="message" id="message"  layoutX="185.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="252.13671875" />
 </AnchorPane>
