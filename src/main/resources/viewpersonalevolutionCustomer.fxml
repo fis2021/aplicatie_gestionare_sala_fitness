@@ -16,7 +16,7 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <Button fx:id="BackButton" layoutX="46.0" layoutY="342.0" mnemonicParsing="false" onAction="#goBack" prefHeight="38.0" prefWidth="73.0" style="-fx-background-color: #8a4242;" text="Back" textFill="#d0a3a3">
+      <Button fx:id="BackButton" id="back" layoutX="46.0" layoutY="342.0" mnemonicParsing="false" onAction="#goBack" prefHeight="38.0" prefWidth="73.0" style="-fx-background-color: #8a4242;" text="Back" textFill="#d0a3a3">
          <font>
             <Font size="17.0" />
          </font>
@@ -27,7 +27,7 @@
             <Image url="@evolutia.jpg" />
          </image>
       </ImageView>
-      <TextField fx:id="nume" layoutX="113.0" layoutY="270.0" />
+      <TextField fx:id="nume" id="nume" layoutX="113.0" layoutY="270.0" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text fill="#400e0e" layoutX="24.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nume:">
          <font>
@@ -40,7 +40,7 @@
             <Font size="10.0" />
          </font>
       </Text>
-      <Button fx:id="SearchButton" layoutX="294.0" layoutY="266.0" mnemonicParsing="false" onAction="#write" style="-fx-background-color: #8a4242;" text="Cauta" textFill="#d0a3a3">
+      <Button fx:id="SearchButton" id="search" layoutX="294.0" layoutY="266.0" mnemonicParsing="false" onAction="#write" style="-fx-background-color: #8a4242;" text="Cauta" textFill="#d0a3a3">
          <font>
             <Font size="13.0" />
          </font>

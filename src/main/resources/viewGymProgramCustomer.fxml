@@ -15,7 +15,7 @@
          </font>
       </Text>
       <TextArea fx:id="ListaPrograme" layoutX="127.0" layoutY="80.0" prefHeight="330.0" prefWidth="428.0" />
-      <Button fx:id="backButton" layoutX="252.0" layoutY="426.0" mnemonicParsing="false" onAction="#goBack" prefHeight="49.0" prefWidth="179.0" style="-fx-background-color: #8a4242;" text="Back" textFill="#d0a3a3">
+      <Button fx:id="backButton" id="back" layoutX="252.0" layoutY="426.0" mnemonicParsing="false" onAction="#goBack" prefHeight="49.0" prefWidth="179.0" style="-fx-background-color: #8a4242;" text="Back" textFill="#d0a3a3">
          <font>
             <Font size="24.0" />
          </font>

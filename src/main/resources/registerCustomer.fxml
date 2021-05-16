@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Text?>
 <AnchorPane prefHeight="446.0" prefWidth="545.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis.maven.controllers.RegisterCustomerController">
     <children>
-        <TextField fx:id="name" layoutX="141.0" layoutY="142.0" mouseTransparent="true" prefHeight="26.0" prefWidth="251.0" />
+        <TextField fx:id="name" id="name" layoutX="141.0" layoutY="142.0" mouseTransparent="true" prefHeight="26.0" prefWidth="251.0" />
         <Label layoutX="8.0" layoutY="140.0" prefHeight="24.0" prefWidth="116.0" text="Nume" textFill="#460606">
             <font>
                 <Font name="Times New Roman" size="24.0" />
@@ -25,9 +25,9 @@
                 <Font name="Centaur" size="24.0" />
             </font>
         </Label>
-        <TextField fx:id="eMail" layoutX="140.0" layoutY="194.0" prefHeight="26.0" prefWidth="182.0" />
-        <TextField fx:id="phoneNumber" layoutX="141.0" layoutY="245.0" prefHeight="26.0" prefWidth="160.0" />
-        <Button fx:id="saveButton" layoutX="164.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleRegisterClient" prefHeight="58.0" prefWidth="205.0" style="-fx-background-color: #8a4242;" text="Salvează!" textFill="#d0a3a3">
+        <TextField fx:id="eMail"  id="eMail" layoutX="140.0" layoutY="194.0" prefHeight="26.0" prefWidth="182.0" />
+        <TextField fx:id="phoneNumber" id="phoneNumber" layoutX="141.0" layoutY="245.0" prefHeight="26.0" prefWidth="160.0" />
+        <Button fx:id="saveButton" id="saveButton" layoutX="164.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleRegisterClient" prefHeight="58.0" prefWidth="205.0" style="-fx-background-color: #8a4242;" text="Salvează!" textFill="#d0a3a3">
             <font>
                 <Font name="Impact" size="31.0" />
             </font></Button>
