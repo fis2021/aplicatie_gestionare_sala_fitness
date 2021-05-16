@@ -1,5 +1,4 @@
 package org.fis.maven;
-
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,6 +12,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.testfx.api.FxRobot;
 import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
+
+import static org.testfx.assertions.api.Assertions.assertThat;
 
 @ExtendWith(ApplicationExtension.class)
 
@@ -46,6 +47,19 @@ class RegistrationTest {
         robot.clickOn("#phoneNumber");
         robot.write("0785643124");
         robot.clickOn("#saveButton");
+        robot.clickOn("#viewClients");
+        robot.clickOn("#goBack");
+        robot.clickOn("#addClients");
+        robot.clickOn("#nameField");
+        robot.write("Pop Vasile");
+        robot.clickOn("#kilograms");
+        robot.write("63");
+        robot.clickOn("#hight");
+        robot.write("178");
+        robot.clickOn("#waist");
+        robot.write("50cm");
+        robot.clickOn("#save");
+        robot.clickOn("#back");
 
     }
 

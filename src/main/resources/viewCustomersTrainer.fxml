@@ -12,7 +12,7 @@
             </font>
         </Text>
         <TextArea fx:id="ListaClienti" layoutX="142.0" layoutY="100.0" prefHeight="285.0" prefWidth="323.0" />
-        <Button fx:id="backButton" layoutX="234.0" layoutY="408.0" mnemonicParsing="false" onAction="#goBack" prefHeight="44.0" prefWidth="138.0" style="-fx-background-color: #8a4242;" text="Back" textFill="#d0a3a3">
+        <Button fx:id="backButton" id="goBack" layoutX="234.0" layoutY="408.0" mnemonicParsing="false" onAction="#goBack" prefHeight="44.0" prefWidth="138.0" style="-fx-background-color: #8a4242;" text="Back" textFill="#d0a3a3">
             <font>
                 <Font size="25.0" />
             </font>
