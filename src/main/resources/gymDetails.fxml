@@ -14,12 +14,12 @@
             <Font name="Impact" size="48.0" />
          </font>
       </Text>
-      <Button fx:id="gymProgramButton" layoutX="32.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleViewGymDetails" prefHeight="59.0" prefWidth="366.0" style="-fx-background-color: #8a4242;" text="Programul Sălii/Antrenamente" textFill="#d0a3a3">
+      <Button fx:id="gymProgramButton" id="program" layoutX="32.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleViewGymDetails" prefHeight="59.0" prefWidth="366.0" style="-fx-background-color: #8a4242;" text="Programul Sălii/Antrenamente" textFill="#d0a3a3">
          <font>
             <Font name="Impact" size="25.0" />
          </font>
       </Button>
-      <Button fx:id="trainersButton" layoutX="78.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleViewTrainers" prefHeight="66.0" prefWidth="223.0" style="-fx-background-color: #8a4242;" text="Antrenori" textFill="#d0a3a3">
+      <Button fx:id="trainersButton" id="trainer" layoutX="78.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleViewTrainers" prefHeight="66.0" prefWidth="223.0" style="-fx-background-color: #8a4242;" text="Antrenori" textFill="#d0a3a3">
          <font>
             <Font name="Impact" size="29.0" />
          </font>
@@ -39,7 +39,7 @@
             <Font name="Impact" size="25.0" />
          </font>
       </Button>
-      <Button fx:id="backButton" layoutX="32.0" layoutY="447.0" mnemonicParsing="false" onAction="#goBack" onDragDetected="#goBack" prefHeight="59.0" prefWidth="190.0" style="-fx-background-color: #8a4242;" text="Back" textFill="#d0a3a3">
+      <Button fx:id="backButton"  id="back" layoutX="32.0" layoutY="447.0" mnemonicParsing="false" onAction="#goBack" onDragDetected="#goBack" prefHeight="59.0" prefWidth="190.0" style="-fx-background-color: #8a4242;" text="Back" textFill="#d0a3a3">
          <font>
             <Font name="Impact" size="25.0" />
          </font>

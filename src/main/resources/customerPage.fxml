@@ -14,7 +14,7 @@
                 <Font name="Impact" size="54.0" />
             </font>
         </Label>
-        <Button fx:id="logoutButton" layoutX="487.0" layoutY="372.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="57.0" prefWidth="109.0" style="-fx-background-color: #8a4242;" text="Logout" textFill="#d0a3a3">
+        <Button fx:id="logoutButton" id="logout" layoutX="487.0" layoutY="372.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="57.0" prefWidth="109.0" style="-fx-background-color: #8a4242;" text="Logout" textFill="#d0a3a3">
          <font>
             <Font name="Centaur" size="27.0" />
          </font></Button>
@@ -23,22 +23,22 @@
             <Image url="@output-onlinepngtools(1).png" />
          </image>
       </ImageView>
-      <Button fx:id="selecttrainerButton" layoutX="43.0" layoutY="170.0" mnemonicParsing="false" onAction="#handleSelectTrainer" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Selectare Antrenor" textFill="#d0a3a3">
+      <Button id="selectTrainer" fx:id="selecttrainerButton" layoutX="43.0" layoutY="170.0" mnemonicParsing="false" onAction="#handleSelectTrainer" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Selectare Antrenor" textFill="#d0a3a3">
          <font>
             <Font name="Impact" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="gymdetailsButton" layoutX="43.0" layoutY="109.0" mnemonicParsing="false" onAction="#showGymDetails" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Detaliile Sălii" textFill="#d0a3a3">
+      <Button id="details" fx:id="gymdetailsButton" layoutX="43.0" layoutY="109.0" mnemonicParsing="false" onAction="#showGymDetails" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Detaliile Sălii" textFill="#d0a3a3">
          <font>
             <Font name="Impact" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="personalevolutionButton" layoutX="43.0" layoutY="236.0" mnemonicParsing="false" onAction="#handlePersonalEvolution" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Evoluție Personală" textFill="#d0a3a3">
+      <Button fx:id="personalevolutionButton" id="personal" layoutX="43.0" layoutY="236.0" mnemonicParsing="false" onAction="#handlePersonalEvolution" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Evoluție Personală" textFill="#d0a3a3">
          <font>
             <Font name="Impact" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="selectprogramButton" layoutX="43.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleSelectProgram" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Selectare Program" textFill="#d0a3a3">
+      <Button fx:id="selectprogramButton" id="selectprog" layoutX="43.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleSelectProgram" prefHeight="50.0" prefWidth="261.0" style="-fx-background-color: #8a4242;" text="Selectare Program" textFill="#d0a3a3">
          <font>
             <Font name="Impact" size="24.0" />
          </font>
