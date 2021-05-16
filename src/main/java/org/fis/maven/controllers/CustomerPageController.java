@@ -1,5 +1,4 @@
 package org.fis.maven.controllers;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -7,11 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-
 public class CustomerPageController {
-
     @FXML
     private Button gymdetailsButton;
     @FXML
@@ -22,7 +18,6 @@ public class CustomerPageController {
     private Button selectprogramButton;
     @FXML
     private Button logoutButton;
-
     @FXML
     public void handleLogout(javafx.event.ActionEvent login) throws IOException {
         FXMLLoader Loader = new FXMLLoader();
@@ -33,7 +28,6 @@ public class CustomerPageController {
         window.setScene(LoginScene);
         window.show();
     }
-
     @FXML
     public void showGymDetails(javafx.event.ActionEvent login) throws IOException {
         FXMLLoader Loader = new FXMLLoader();
@@ -44,7 +38,6 @@ public class CustomerPageController {
         window.setScene(LoginScene);
         window.show();
     }
-
     @FXML
     public void handlePersonalEvolution(javafx.event.ActionEvent login) throws IOException {
         FXMLLoader Loader = new FXMLLoader();
@@ -55,6 +48,25 @@ public class CustomerPageController {
         window.setScene(LoginScene);
         window.show();
     }
-
+    @FXML
+    public void handleSelectTrainer(javafx.event.ActionEvent login) throws IOException {
+        FXMLLoader Loader = new FXMLLoader();
+        Loader.setLocation(getClass().getClassLoader().getResource("selectTrainerCustomer.fxml"));
+        Parent viewLogin = Loader.load();
+        Scene LoginScene = new Scene(viewLogin, 800, 708);
+        Stage window = (Stage) ((Node) login.getSource()).getScene().getWindow();
+        window.setScene(LoginScene);
+        window.show();
+    }
+    @FXML
+    public void handleSelectProgram(javafx.event.ActionEvent login) throws IOException {
+        FXMLLoader Loader = new FXMLLoader();
+        Loader.setLocation(getClass().getClassLoader().getResource("SelectProgramCustomer.fxml"));
+        Parent viewLogin = Loader.load();
+        Scene LoginScene = new Scene(viewLogin, 800, 708);
+        Stage window = (Stage) ((Node) login.getSource()).getScene().getWindow();
+        window.setScene(LoginScene);
+        window.show();
+    }
 
 }

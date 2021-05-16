@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="708.0" prefWidth="800.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fis.maven.controllers.SelectTrainerController">
+    <children>
+        <Text fill="#400e0e" layoutX="262.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selectare Antrenor">
+            <font>
+                <Font name="Impact" size="39.0" />
+            </font>
+        </Text>
+        <TextArea fx:id="ListaAntrenori" layoutX="413.0" layoutY="433.0" prefHeight="258.0" prefWidth="371.0" />
+        <Text fill="#400e0e" layoutX="449.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Antrenorii Disponibili">
+            <font>
+                <Font name="Impact" size="34.0" />
+            </font>
+        </Text>
+        <Button fx:id="BackButton" id="back" layoutX="58.0" layoutY="631.0" mnemonicParsing="false" onAction="#goBack" prefHeight="58.0" prefWidth="169.0" style="-fx-background-color: #8a4242;" text="Back" textFill="#d0a3a3">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Button>
+        <Button fx:id="SearchButton" id="search" layoutX="118.0" layoutY="269.0" mnemonicParsing="false" onAction="#write" prefHeight="58.0" prefWidth="169.0" style="-fx-background-color: #8a4242;" text="Selectare" textFill="#d0a3a3">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Button>
+        <TextField fx:id="nume" id="nume" layoutX="23.0" layoutY="200.0" prefHeight="48.0" prefWidth="359.0" />
+        <Text fill="#400e0e" layoutX="34.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ați selectat:" wrappingWidth="386.90625">
+            <font>
+                <Font name="Impact" size="15.0" />
+            </font>
+        </Text>
+        <Text fill="#400e0e" layoutX="34.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vă rugăm introduceți numele antrenorului dorit!" wrappingWidth="386.90625">
+            <font>
+                <Font name="Impact" size="15.0" />
+            </font>
+        </Text>
+        <TextArea fx:id="ListaAntrenor" layoutX="34.0" layoutY="421.0" prefHeight="109.0" prefWidth="314.0" />
+        <ImageView fitHeight="204.0" fitWidth="250.0" layoutX="498.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@output-onlinepngtools(1).png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
