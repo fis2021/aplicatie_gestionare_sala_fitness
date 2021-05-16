@@ -62,14 +62,6 @@ class UserServiceTest {
     }
 
 
-    @Test
-    @DisplayName("Username  exists")
-    public void testCheckUserDoesAlreadyExist() throws Exception {
-        assertThrows(UsernameAlreadyExistsException.class,()->{
-            UserService.addUser(ADMIN, ADMIN, ADMIN,ADMIN,ADMIN,ADMIN);
-            UserService.checkUserDoesAlreadyExist(ADMIN);
-        });
-    }
 
     @Test
     @DisplayName("Check password")

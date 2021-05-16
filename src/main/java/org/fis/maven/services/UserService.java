@@ -97,14 +97,13 @@ public class UserService {
 
     }
 
-    public static boolean checkUserDoesAlreadyExist(String username) throws UsernameAlreadyExistsException {
+    public static boolean checkUserDoesAlreadyExist(String username, String password) throws IncorrectPasswordException {
         for (User user : userRepository.find()) {
             if (Objects.equals(username, user.getUsername())) {
-
-                    throw new UsernameAlreadyExistsException(username);
-
+                if(!Objects.equals(user.getPassword(), encodePassword(username,password)))
+                    throw new IncorrectPasswordException(password);
+                else return true;
             }
-            else return true;
         }
         return false;
     }
