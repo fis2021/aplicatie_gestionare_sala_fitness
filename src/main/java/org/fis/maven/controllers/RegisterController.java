@@ -41,7 +41,7 @@ public class RegisterController {
         try {
             Stage stage = new Stage();
 
-            boolean test = UserService.checkUserDoesAlreadyExist(usernameField.getText());
+            boolean test = UserService.checkUserDoesAlreadyExist(usernameField.getText(), passwordField.getText());
             Stage primaryStage = (Stage) registerButton.getScene().getWindow();
             primaryStage.close();
             if (test) {
@@ -56,7 +56,7 @@ public class RegisterController {
                     stage.setScene(new Scene(root));
                     stage.show();
                 } else if (((String) role.getValue()).equals("Antrenor")) {
-                    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("customerPage.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("trainerPage.fxml"));
                     Parent root = (Parent) loader.load();
                     stage.setScene(new Scene(root));
                     stage.show();
@@ -93,20 +93,12 @@ public class RegisterController {
                     reg.setRole(role);
                 }
             }
-        } catch (UsernameAlreadyExistsException e) {
+        } catch (IncorrectPasswordException e) {
             message.setText(e.getMessage());
         } catch (IOException e) {
             System.out.println("Eroare!!");
         }
     }
 
-    public void goToLogin(javafx.event.ActionEvent login) throws IOException {
-        FXMLLoader Loader = new FXMLLoader();
-        Loader.setLocation(getClass().getClassLoader().getResource("register.fxml"));
-        Parent viewLogin = Loader.load();
-        Scene LoginScene = new Scene(viewLogin, 650, 450);
-        Stage window = (Stage) ((Node) login.getSource()).getScene().getWindow();
-        window.setScene(LoginScene);
-        window.show();
-    }
+
 }
